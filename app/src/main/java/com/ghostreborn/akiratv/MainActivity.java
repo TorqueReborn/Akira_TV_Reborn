@@ -10,5 +10,9 @@ public class MainActivity extends FragmentActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.main_browse_fragment, new MainFragment())
+                .commit();
     }
 }
